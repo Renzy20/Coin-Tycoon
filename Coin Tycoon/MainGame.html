@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="maingame.css">
+    <link rel="stylesheet" href="upgrade.css">
+    <title>Coin Tycoon</title>
+</head>
+<body>
+    <div class="container">
+        <div class="invisible-container">
+            <h3 id="balance">Balance: $0.001</h3>
+        </div>
+
+        <div class="invisible-container">
+            <img id="tap-coin" src="GoldCoin.png" alt="gold-coin">
+        </div>
+
+        <div class="invisible-container">
+            <div class="box-container">
+                <button>Market</button>
+                <button id="upgradeButton">Upgrade</button>
+                <button id="profileButton">Profile</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Profile -->
+    <div class="mode" id="profileMode">
+        <div class="mode-container">
+            <img src="avatar.png" alt="Avatar" class="profile-avatar" id="avatar">
+            <input type="file" id="avatarInput" style="display: none;">
+             <div class="profile-username" id="username">Username</div>
+             <div class="profile-timer" id="time-online">Time online: 0 second</div>
+
+             <div class="edit-section">
+                <input type="text" id="newUsername" class="input-field" placeholder="New Username">
+                <button class="save-button" id="saveUsername">Save Username</button>
+             </div>
+             <button class="logout-button" id="logout">Log out</button>
+        </div>
+    </div>
+
+    <!-- Log out Container -->
+    <div class="mode" id="logoutContainer" style="display: none;">
+        <div class="mode-container">
+            <h2 id="logoutMessage"></h2>
+            <button class="buttons" id="loButton">Okay</button>
+        </div>
+    </div>
+
+    <!-- Username Change Limit -->
+    <div class="mode" id="userChangeLimit" style="display: none;">
+        <div class="mode-container">
+            <h2 id="limitMessage"></h2>
+            <button id="daysButton">Okay</button>
+        </div>
+    </div>
+
+    <!-- Username updated successfully -->
+    <div class="mode" id="usernameUpdated" style="display: none;">
+        <div class="mode-container">
+            <h2 id="userUpdateMessage"></h2>
+            <button id="userUpdateButton">Okay</button>
+        </div>
+    </div>
+
+    <!-- Valid username -->
+    <div class="mode" id="validUsername" style="display: none;">
+        <div class="mode-container">
+            <h2 id="validMessage"></h2>
+            <button id="validButton">Okay</button>
+        </div>
+    </div>
+
+    <!-- Upgrade  -->
+    <div class="mode" id="upgradeMode">
+        <div class="mode-container">
+            <h2>Buy Upgrades</h2>
+            <h3>COMING SOON</h3>
+        </div>
+    </div>
+
+    <script src="maingame.js"></script>
+    <script src="upgrade.js"></script>
+</body>
+</html>
